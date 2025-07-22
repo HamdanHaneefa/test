@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOBS - Responsive Images</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .responsive-img {
+      width: 100vw;
+      height: auto;
+      display: none;
+    }
+
+    #mobile-img {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      #mobile-img {
+        display: none;
+      }
+
+      #desktop-img {
+        display: block;
+        transform: scale(1.08) translateY(-120px); /* Moved up more */
+        transform-origin: top center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="mobile-image.png" alt="Mobile View" class="responsive-img" id="mobile-img" />
+  <img src="desktop-image.png" alt="Desktop View" class="responsive-img" id="desktop-img" />
+
+</body>
+</html>
